@@ -16,7 +16,7 @@ def crear_recordatorio(request):
 
 def lista_recordatorios(request):
     recordatorios = Recordatorio.objects.all()
-    return render(request, 'lista_recordatorios.html', {'recordatorios': recordatorios})
+    return render(request, 'listar_recordatorios.html', {'recordatorios': recordatorios})
 
 def obtener_actualizaciones(request):
     ahora = timezone.localtime().time()  # aqui estoy usando timezone.localtime para obtener la hora local
